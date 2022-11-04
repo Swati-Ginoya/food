@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.userinput{
+  background-color: aliceblue;
+  padding: 10px 20px;
+  width: 500px;
+  margin-top: 60px;
+}

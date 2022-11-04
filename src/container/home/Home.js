@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 function Home(props) {
@@ -82,13 +83,13 @@ function Home(props) {
                         <div className="slick1">
                             <div className="item-slick1 item1-slick1" style={{ backgroundImage: 'url(images/slide1-01.jpg)' }}>
                                 <div className="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                                    <span className="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+                                    <span className="caption1-slide1 txt1 t-center m-b-15">
                                         Welcome to
                                     </span>
-                                    <h2 className="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                                    <h2 className="caption2-slide1 tit1 t-center m-b-37" data-appear="fadeInUp">
                                         Pato Place
                                     </h2>
-                                    <div className="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+                                    <div className="wrap-btn-slide1 visible-false">
                                         {/* Button1 */}
                                         <a href="menu.html" className="btn1 flex-c-m size1 txt3 trans-0-4">
                                             Look Menu
@@ -96,7 +97,7 @@ function Home(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="item-slick1 item2-slick1" style={{ backgroundImage: 'url(images/master-slides-02.jpg)' }}>
+                            {/* <div className="item-slick1 item2-slick1" style={{ backgroundImage: 'url(images/master-slides-02.jpg)' }}>
                                 <div className="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                                     <span className="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
                                         Welcome to
@@ -105,14 +106,14 @@ function Home(props) {
                                         Pato Place
                                     </h2>
                                     <div className="wrap-btn-slide1 animated visible-false" data-appear="slideInUp">
-                                        {/* Button1 */}
+                                        
                                         <a href="menu.html" className="btn1 flex-c-m size1 txt3 trans-0-4">
                                             Look Menu
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="item-slick1 item3-slick1" style={{ backgroundImage: 'url(images/master-slides-01.jpg)' }}>
+                            </div> */}
+                            {/* <div className="item-slick1 item3-slick1" style={{ backgroundImage: 'url(images/master-slides-01.jpg)' }}>
                                 <div className="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                                     <span className="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
                                         Welcome to
@@ -121,13 +122,13 @@ function Home(props) {
                                         Pato Place
                                     </h2>
                                     <div className="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
-                                        {/* Button1 */}
+                            
                                         <a href="menu.html" className="btn1 flex-c-m size1 txt3 trans-0-4">
                                             Look Menu
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="wrap-slick1-dots" />
                     </div>
@@ -246,7 +247,7 @@ function Home(props) {
                                 Discover
                             </span>
                             <h3 className="tit5 t-center m-t-2">
-                                Our Menu
+                                Our Categories
                             </h3>
                         </div>
                         <div className="row">
@@ -257,9 +258,9 @@ function Home(props) {
                                         <div className="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
                                             <img src="images/our-menu-01.jpg" alt="IMG-MENU" />
                                             {/* Button2 */}
-                                            <a href="#" className="btn2 flex-c-m txt5 ab-c-m size4">
+                                            <NavLink href="#" className="btn2 flex-c-m txt5 ab-c-m size4" to="/Categories">
                                                 Lunch
-                                            </a>
+                                            </NavLink>
                                         </div>
                                     </div>
                                     <div className="col-sm-6">
@@ -338,157 +339,11 @@ function Home(props) {
                                             </h3>
                                         </div>
                                         {/* Block2 */}
-                                        <div className="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">
+                                        <div className="blo2 flex-w flex-str flex-col-c-m-lg " data-appear="zoomIn">
                                             {/* Pic block2 */}
                                             <a href="#" className="wrap-pic-blo2 bg1-blo2" style={{ backgroundImage: 'url(images/event-02.jpg)' }}>
                                                 <div className="time-event size10 txt6 effect1">
                                                     <span className="txt-effect1 flex-c-m t-center">
-                                                        08:00 PM Tuesday - 21 November 2018
-                                                    </span>
-                                                </div>
-                                            </a>
-                                            {/* Text block2 */}
-                                            <div className="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-                                                <h4 className="tit7 t-center m-b-10">
-                                                    Wines during specific nights
-                                                </h4>
-                                                <p className="t-center">
-                                                    Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia
-                                                </p>
-                                                <div className="flex-sa-m flex-w w-full m-t-40">
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 days">
-                                                            25
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Days
-                                                        </span>
-                                                    </div>
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 hours">
-                                                            12
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Hours
-                                                        </span>
-                                                    </div>
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 minutes">
-                                                            59
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Minutes
-                                                        </span>
-                                                    </div>
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 seconds">
-                                                            56
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Seconds
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <a href="#" className="txt4 m-t-40">
-                                                    View Details
-                                                    <i className="fa fa-long-arrow-right m-l-10" aria-hidden="true" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item-slick2 item2-slick2" style={{ backgroundImage: 'url(images/bg-event-02.jpg)' }}>
-                                <div className="wrap-content-slide2 p-t-115 p-b-208">
-                                    <div className="container">
-                                        {/* - */}
-                                        <div className="title-event t-center m-b-52">
-                                            <span className="tit2 p-l-15 p-r-15">
-                                                Upcomming
-                                            </span>
-                                            <h3 className="tit6 t-center p-l-15 p-r-15 p-t-3">
-                                                Events
-                                            </h3>
-                                        </div>
-                                        {/* Block2 */}
-                                        <div className="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">
-                                            {/* Pic block2 */}
-                                            <a href="#" className="wrap-pic-blo2 bg2-blo2" style={{ backgroundImage: 'url(images/event-06.jpg)' }}>
-                                                <div className="time-event size10 txt6 effect1">
-                                                    <span className="txt-effect1 flex-c-m">
-                                                        08:00 PM Tuesday - 21 November 2018
-                                                    </span>
-                                                </div>
-                                            </a>
-                                            {/* Text block2 */}
-                                            <div className="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-                                                <h4 className="tit7 t-center m-b-10">
-                                                    Wines during specific nights
-                                                </h4>
-                                                <p className="t-center">
-                                                    Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia
-                                                </p>
-                                                <div className="flex-sa-m flex-w w-full m-t-40">
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 days">
-                                                            25
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Days
-                                                        </span>
-                                                    </div>
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 hours">
-                                                            12
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Hours
-                                                        </span>
-                                                    </div>
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 minutes">
-                                                            59
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Minutes
-                                                        </span>
-                                                    </div>
-                                                    <div className="size11 flex-col-c-m">
-                                                        <span className="dis-block t-center txt7 m-b-2 seconds">
-                                                            56
-                                                        </span>
-                                                        <span className="dis-block t-center txt8">
-                                                            Seconds
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <a href="#" className="txt4 m-t-40">
-                                                    View Details
-                                                    <i className="fa fa-long-arrow-right m-l-10" aria-hidden="true" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item-slick2 item3-slick2" style={{ backgroundImage: 'url(images/bg-event-04.jpg)' }}>
-                                <div className="wrap-content-slide2 p-t-115 p-b-208">
-                                    <div className="container">
-                                        {/* - */}
-                                        <div className="title-event t-center m-b-52">
-                                            <span className="tit2 p-l-15 p-r-15">
-                                                Upcomming
-                                            </span>
-                                            <h3 className="tit6 t-center p-l-15 p-r-15 p-t-3">
-                                                Events
-                                            </h3>
-                                        </div>
-                                        {/* Block2 */}
-                                        <div className="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="rotateInUpLeft">
-                                            {/* Pic block2 */}
-                                            <a href="#" className="wrap-pic-blo2 bg3-blo2" style={{ backgroundImage: 'url(images/event-01.jpg)' }}>
-                                                <div className="time-event size10 txt6 effect1">
-                                                    <span className="txt-effect1 flex-c-m">
                                                         08:00 PM Tuesday - 21 November 2018
                                                     </span>
                                                 </div>
@@ -679,10 +534,10 @@ function Home(props) {
                             <div className="item-slick3 item1-slick3">
                                 <div className="wrap-content-slide3 p-b-50 p-t-50">
                                     <div className="container">
-                                        <div className="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
+                                        <div className="pic-review size14 bo4 wrap-cir-pic m-l-r-auto ">
                                             <img src="images/avatar-01.jpg" alt="IGM-AVATAR" />
                                         </div>
-                                        <div className="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
+                                        <div className="content-review m-t-33">
                                             <p className="t-center txt12 size15 m-l-r-auto">
                                                 “ We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui ”
                                             </p>
@@ -693,55 +548,7 @@ function Home(props) {
                                                 <i className="fa fa-star p-l-1" aria-hidden="true" />
                                                 <i className="fa fa-star p-l-1" aria-hidden="true" />
                                             </div>
-                                            <div className="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
-                                                Marie Simmons ˗ New York
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item-slick3 item2-slick3">
-                                <div className="wrap-content-slide3 p-b-50 p-t-50">
-                                    <div className="container">
-                                        <div className="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
-                                            <img src="images/avatar-04.jpg" alt="IGM-AVATAR" />
-                                        </div>
-                                        <div className="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
-                                            <p className="t-center txt12 size15 m-l-r-auto">
-                                                “ We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui ”
-                                            </p>
-                                            <div className="star-review fs-18 color0 flex-c-m m-t-12">
-                                                <i className="fa fa-star" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                            </div>
-                                            <div className="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
-                                                Marie Simmons ˗ New York
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item-slick3 item3-slick3">
-                                <div className="wrap-content-slide3 p-b-50 p-t-50">
-                                    <div className="container">
-                                        <div className="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
-                                            <img src="images/avatar-05.jpg" alt="IGM-AVATAR" />
-                                        </div>
-                                        <div className="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
-                                            <p className="t-center txt12 size15 m-l-r-auto">
-                                                “ We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui ”
-                                            </p>
-                                            <div className="star-review fs-18 color0 flex-c-m m-t-12">
-                                                <i className="fa fa-star" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                                <i className="fa fa-star p-l-1" aria-hidden="true" />
-                                            </div>
-                                            <div className="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
+                                            <div className="more-review txt4 t-center m-t-32">
                                                 Marie Simmons ˗ New York
                                             </div>
                                         </div>
@@ -784,7 +591,7 @@ function Home(props) {
                                 {/* Block1 */}
                                 <div className="blo1">
                                     <div className="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                        <a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO" /></a>
+                                        <NavLink className="nav-link scrollto " to="/Blog"><img src="images/blog-01.jpg" alt="IMG-INTRO" /></NavLink>
                                         <div className="time-blog">
                                             21 Dec 2017
                                         </div>
@@ -807,7 +614,7 @@ function Home(props) {
                                 {/* Block1 */}
                                 <div className="blo1">
                                     <div className="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                        <a href="blog-detail.html"><img src="images/blog-02.jpg" alt="IMG-INTRO" /></a>
+                                        <NavLink className="nav-link scrollto " to="/Blog"><img src="images/blog-02.jpg" alt="IMG-INTRO" /></NavLink>
                                         <div className="time-blog">
                                             15 Dec 2017
                                         </div>
@@ -830,7 +637,7 @@ function Home(props) {
                                 {/* Block1 */}
                                 <div className="blo1">
                                     <div className="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                        <a href="blog-detail.html"><img src="images/blog-03.jpg" alt="IMG-INTRO" /></a>
+                                        <NavLink className="nav-link scrollto " to="/Blog"><img src="images/blog-03.jpg" alt="IMG-INTRO" /></NavLink>
                                         <div className="time-blog">
                                             12 Dec 2017
                                         </div>

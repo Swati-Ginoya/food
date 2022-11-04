@@ -9,24 +9,42 @@ import Gallery from './container/gallery/Gallery';
 import About from './container/about/About';
 import Blog from './container/blog/Blog';
 import Contact from './container/contact/Contact';
-import Footer from './component/footer/Footer';
 import Order from './container/order/Order';
+import Footer from './component/footer/Footer';
+import Login from './container/login/Login';
+import Categories from './container/categories/Categories';
+import PublicRoute from './route/PublicRoute';
+import PrivateRoute from './route/PrivateRoute';
+import { persistor, store } from './redux/Store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { SnackbarProvider } from 'notistack';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
     <div className="App">
-    <Header />
-    <Switch>
-    <Route path={"/Home"} exact component={Home}></Route>
-    <Route path={"/Menu"} exact component={Menu}></Route>
-    <Route path={"/Reservation"} exact component={Reservation}></Route>
-    <Route path={"/Gallery"} exact component={Gallery}></Route>
-    <Route path={"/About"} exact component={About}></Route>
-    <Route path={"/BLog"} exact component={Blog}></Route>
-    <Route path={"/Contact"} exact component={Contact}></Route>
-    <Route path={"/Order"} exact component={Order}/>
-    </Switch>
-     <Footer />
+      <SnackbarProvider maxSnack={3}>
+      <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+     
+        <Header />
+        <Switch>
+          <PublicRoute path={"/"} exact component={Home}></PublicRoute>
+          <PublicRoute path={"/Menu"} exact component={Menu}></PublicRoute>
+          <PrivateRoute path={"/Reservation"} exact component={Reservation}></PrivateRoute>
+          <PublicRoute path={"/Gallery"} exact component={Gallery}></PublicRoute>
+          <PublicRoute path={"/About"} exact component={About}></PublicRoute>
+          <PublicRoute path={"/BLog"} exact component={Blog}></PublicRoute>
+          <PublicRoute path={"/Contact"} exact component={Contact}></PublicRoute>
+          <PrivateRoute path={"/Order"} exact component={Order} />
+          <PublicRoute path={"/Login"} exact component={Login} />
+          <PublicRoute path={"/Categories"} exact component={Categories} />
+        </Switch>
+        <Footer />
+  
+      </PersistGate>
+      </Provider>
+      </SnackbarProvider>
     </div>
   );
 }
